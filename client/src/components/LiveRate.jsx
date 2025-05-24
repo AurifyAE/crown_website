@@ -65,7 +65,7 @@ function LiveRate() {
   );
 
   return (
-    <div className='flex items-center justify-center py-30'>
+    <div id='liverate' className='flex items-center justify-center py-30'>
         <div className='w-[1000px] h-[500px] overflow-hidden rounded-2xl'>
             <div className="tradingview-widget-container" ref={container}>
             <div className="tradingview-widget-container__widget"></div>
