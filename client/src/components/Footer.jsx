@@ -10,22 +10,22 @@ import { Link } from 'react-router-dom'
 export default function Footer() {
     return (
         <div className='flex flex-col items-center bg-[#7F4F20] pt-10 gap-5 lato-regular'>
-            <p>Get started now, try our product and start saving through trading</p>
+            <p className='text-sm lg:text-base'>Get started now, try our product and start saving through trading</p>
             <div className='relative flex justify-center w-1/2'>
                 <input 
                 type="text" 
-                className='w-md h-14 border-2 rounded-[70px] placeholder:text-white px-5  pr-16' 
+                className='w-md h-14 border-2 rounded-[70px] placeholder:text-white px-5 pr-16' 
                 placeholder='Enter your email here' 
                 />
-                <button className='bg-[#BA8A54] absolute right-41 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full flex items-center justify-center cursor-pointer'>
+                <button className='bg-[#BA8A54] absolute -right-6 md:right-2 lg:right-41 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full flex items-center justify-center cursor-pointer'>
                     <img src={rightArrow} alt="" />
                 </button>
             </div>
 
             <div className="w-full h-[2px] bg-white mt-10" />
 
-            <div className='flex justify-around items-center w-full p-10'>
-                <img src={logo} alt="Crown Logo" className='w-40' />
+            <div className='flex flex-col md:flex-row justify-around items-center w-full md:gap-0 gap-6 p-10'>
+                <img src={logo} alt="Crown Logo" className='w-32 lg:w-40' />
                 <div className='flex flex-col items-center gap-4'>
                     <h2 className='font-bold text-lg'>Company</h2>
                     <ul className='flex flex-col text-sm gap-3'>
@@ -42,7 +42,7 @@ export default function Footer() {
                         </Link>
                     </ul>
                 </div>
-                <div className='w-1/3 flex flex-col gap-4'>
+                <div className='lg:w-1/3 flex flex-col gap-4 md:text-sm'>
                     <div className=' flex items-start gap-3 cursor-pointer'>
                         <img src={location} alt="Location" className='' />
                         <p>Crown Future Gold and Diamond LLC,

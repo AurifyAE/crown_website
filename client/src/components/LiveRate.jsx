@@ -1,5 +1,4 @@
-// TradingViewWidget.jsx
-import React, { useEffect, useRef, memo } from 'react';
+  import React, { useEffect, useRef, memo } from 'react';
 
 function LiveRate() {
   const container = useRef();
