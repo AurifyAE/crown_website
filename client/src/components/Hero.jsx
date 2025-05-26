@@ -1,15 +1,17 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectFade, Autoplay } from 'swiper/modules';
+import { EffectFade, Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 import 'swiper/css/pagination';
 import video1 from '../assets/hero/video1.mp4'
 import video2 from '../assets/hero/video2.mp4'
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Hero() {
+    const navigate = useNavigate();
     const videos = [
         {
             src: video1,
@@ -26,17 +28,17 @@ export default function Hero() {
     return (
     <div className="w-full h-screen">
         <Swiper
-            modules={[EffectFade, Autoplay]}
+            modules={[EffectFade, Autoplay, Pagination]}
             effect="fade"
             autoplay={{
-            delay: 4000,
+            delay: 10000,
             disableOnInteraction: false,
             }}
             pagination={{
             clickable: true,
             }}
             loop={true}
-            className="w-full h-full"
+            className="w-full h-full custom-swiper"
         >
             {videos.map((vid, index) => (
             <SwiperSlide key={index}>
@@ -48,10 +50,13 @@ export default function Hero() {
                         loop
                         className="w-full h-full object-cover brightness-70"
                     />
-                    <div className="absolute top-1/3 left-30 text-white max-w-4xl z-10 space-y-10">
+                    <div className="absolute top-45 left-30 text-white max-w-4xl z-10 space-y-10">
                         <h1 className="text-6xl font-bold bg-gradient-to-r from-[#F0E5D9] to-[#DFB77C] bg-clip-text text-transparent">{vid.title}</h1>
                         <p className="max-w-lg text-xl font-light">{vid.desc}</p>
-                        <button className='w-64 h-15 bg-[#7F4F20] rounded-[20px]'>Enquiry Now</button>
+                        <button 
+                            className='w-64 h-15 bg-[#7F4F20] rounded-[20px] cursor-pointer'
+                            onClick={() => navigate('/contact')}
+                        >Enquiry Now</button>
                     </div>
                 </div>
             </SwiperSlide>

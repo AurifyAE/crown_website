@@ -20,12 +20,12 @@ function LiveRate() {
               "CAPITALCOM:SILVER|1D"
             ]
           ],
-          "chartOnly": true,
+          "chartOnly": false,
           "width": "1000",
           "height": "500",
           "locale": "en",
           "colorTheme": "dark",
-          "autosize": true,
+          "autosize": false,
           "showVolume": false,
           "showMA": false,
           "hideDateRanges": false,
@@ -42,12 +42,11 @@ function LiveRate() {
           "maLineColor": "#2962FF",
           "maLineWidth": 1,
           "maLength": 9,
-          "headerFontSize": "medium",
+          "headerFontSize": "small",
           "fontColor": "rgba(219, 219, 219, 1)",
-          "gridLineColor": "rgba(74, 74, 74, 0.06)",
-          "backgroundColor": "rgba(238, 220, 196, 0.49)",
-          "widgetFontColor": "rgba(238, 220, 196, 1)",
-          "lineWidth": 2,
+          "gridLineColor": "rgba(255, 255, 255, 0.49)",
+          "backgroundColor": "rgba(238, 220, 196, 0.5)",
+          "lineWidth": 1,
           "lineType": 0,
           "dateRanges": [
             "1d|1",
@@ -69,7 +68,6 @@ function LiveRate() {
         <div className='w-[1000px] h-[500px] overflow-hidden rounded-2xl'>
             <div className="tradingview-widget-container" ref={container}>
             <div className="tradingview-widget-container__widget"></div>
-            <div className="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span className="white-text">Track all markets on TradingView</span></a></div>
             </div>
         </div>
     </div>
@@ -77,3 +75,6 @@ function LiveRate() {
 }
 
 export default memo(LiveRate);
+
+
+
